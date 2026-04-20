@@ -1,5 +1,8 @@
 out/
+target/
 *.class
 *.log
 .DS_Store
 Thumbs.db
+starter.zip
+temp-spring-app/
