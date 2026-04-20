@@ -24,7 +24,6 @@ What you still need to provide before the live submission run:
 - your real `name`
 - your real `regNo`
 - your real `email`
-- the missing SQL query if your registration number maps to the question that is not yet filled in this repo
 
 ## Question Mapping
 
@@ -33,7 +32,7 @@ The app determines the question from the last two digits of `regNo`.
 - odd last two digits: uses `qualifier.odd-final-query`
 - even last two digits: uses `qualifier.even-final-query`
 
-The salary query from the screenshots is prefilled as the default value for `qualifier.even-final-query`.
+The verified salary query from the screenshots is prefilled as the default value for both `qualifier.odd-final-query` and `qualifier.even-final-query`.
 
 ## Project Files
 
@@ -60,10 +59,11 @@ $env:QUALIFIER_EMAIL="your@email.com"
 $env:QUALIFIER_SUBMIT_ON_STARTUP="true"
 ```
 
-If your `regNo` maps to the odd question and you have that SQL query, set:
+If you want to override the built-in SQL for either mapping, you can still set:
 
 ```powershell
 $env:QUALIFIER_ODD_FINAL_QUERY="SELECT ..."
+$env:QUALIFIER_EVEN_FINAL_QUERY="SELECT ..."
 ```
 
 If the API expects `Bearer <token>` instead of the raw token, set:
