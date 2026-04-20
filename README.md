@@ -1,4 +1,4 @@
-#Qualifier - Salary Query Project
+# Qualifier - Salary Query Project
 
 This repository is a complete, git-ready solution for the qualifier problem using:
 
